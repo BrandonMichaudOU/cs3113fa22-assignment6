@@ -141,6 +141,6 @@ plt.legend(['Threads 2', 'Threads 4', 'Threads 8', 'Threads 16'],
            loc='upper left')
 
 # Save the two figures
-plt.savefig("{}_rt.png".format(csv_file), bbox_inches='tight')
-plt.savefig("{}_rt.pdf".format(csv_file), bbox_inches='tight')
+plt.savefig("imgs/{}_rt.png".format(csv_file), bbox_inches='tight')
+plt.savefig("imgs/{}_rt.pdf".format(csv_file), bbox_inches='tight')
 EOF
