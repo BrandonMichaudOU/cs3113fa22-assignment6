@@ -20,11 +20,15 @@ When the code runs, depending on the machine, it may try to count to a number th
 A semaphore is an integer value used for signaling among processes. There are three atomic operations that may be performed on a semaphore: initialize, increment, and decrement. Decrement is used to block a process, and increment is used to unblock a process.
 
 ## Definitions of "real time", "kernel time", "user time".
-- 
+- Real time is the amount of cumulative time that passes between when a process begins running and when it terminates.
+- Kernel time is the amount of real time that is spent in kernel mode.
+- User time is the amount of real time that is spent in user mode.
 
 ## Include plots from the results.
-![plot 1](plot.png)
-
+![2-Core Plot](imgs/experiment2022110604.csv_rt.png)
+![4-Core Plot](imgs/experiment2022110612.csv_rt.png)
+![8-Core Plot](imgs/experiment2022110613.csv_rt.png)
+![16-Core Plot](imgs/experiment2022110625.csv_rt.png)
 
 ## Descriptions of trends of the plots.
 
