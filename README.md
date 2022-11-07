@@ -31,7 +31,7 @@ A semaphore is an integer value used for signaling among processes. There are th
 ![16-Core Plot](imgs/experiment2022110625.csv_rt.png)
 
 ## Descriptions of trends of the plots.
-
+For each experiment, it is clear from the above graphs that as the number of loops increases, the time to complete the process also increases in a linear fashion, regardless of the number of threads. Additionally, as the number of threads increases, the time it takes to complete the process also increases. Interestingly, the time decreased between the experiments with 2 cores and 4 cores, but increased between 4 cores and 8 cores, before decreasing again between 8 cores and 16 cores. Taken altogether, there seems to be an average negative trend between time and the number of cores, but there also seems to be some amount of noise/randomness to the results for an individual experiment.
 
 ## Explanation of the trend results.
-
+The time increases linearly with the number of loops because, assuming each iteration in a loop takes the same amount of time, when you double the number of loops, you double the time. This result is independent of the number of threads. When the number of threads is increased, the time is also increased because the threads have to coordinate with each other using semaphores to ensure protection of shared memory, which takes additional time and scales linearly. By increasing the number of cores, we should expect to see that the time it takes to complete the process is decreased because we can divide the threads across the new cores. This is the general trend from the experiments, but there is some fluctuation. This could be the result of many things. One possibility is the cores were also busy executing other threads not from the experiment. It could also be that some of the cores were better/faster than others. Further testing is needed to develop an average time across experiments of the same number of cores. 
